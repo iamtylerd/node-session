@@ -1,0 +1,12 @@
+nav.navbar.navbar-default
+	.container-fluid
+		ul.nav.nav-pills
+			li(class=`${page || 'active'}`)
+				a(href='/') Home
+			if email
+				li: a(href='/logout') Logged in as #{email}
+			else
+				li(class=`${page === 'login' ? 'active' : ''}`)
+					a(href='/login') Login
+				li(class=`${page === 'register' ? 'active' : ''}`)
+					a(href='/register') Register
