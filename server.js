@@ -17,6 +17,7 @@ app.set('port', port)
 
 app.set('view engine', 'pug');
 app.locals.user = {email: 'nothing@nothing.com'}
+app.locals.body = {}
 
 //Middleware
 
